@@ -1,4 +1,4 @@
-qconst {
+const {
   createPerson,
   getName,
   getProperty,
