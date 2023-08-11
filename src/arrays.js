@@ -8,7 +8,7 @@ const arrayToCSVString = array => {
 };
 
 const csvStringToArray = string => {
-  return string.split();
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
@@ -16,8 +16,7 @@ const addToArray = (element, array) => {
 };
 
 const addToArray2 = (element, array) => {
-  const newArray = [...array, element];
-  return newArray;
+  return [...array, element];
 };
 
 const removeNthElement = (index, array) => {
@@ -40,6 +39,12 @@ const reverseWordsInArray = strings => {
       .reverse()
       .join('')
   );
+};
+
+const elementsStartingWithAVowel = strings => {
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  return strings.filter(string => vowels.includes(string[0].toLowerCase()));
 };
 
 const onlyEven = numbers => {

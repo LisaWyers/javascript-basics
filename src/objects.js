@@ -1,7 +1,7 @@
 const createPerson = (name, age) => {
   return {
-    name: name
-    age: age
+    name,
+    age
   };
 };
 
@@ -14,7 +14,7 @@ const getProperty = (property, object) => {
 };
 
 const hasProperty = (property, object) => {
-  return object.hasOwnProperty(property);
+  return !!object(property);
 };
 
 const isOver65 = person => {
@@ -22,8 +22,7 @@ const isOver65 = person => {
 };
 
 const getAges = people => {
-  const result = people.map(person => person.age);
-  return result;
+  return people.map(person => person.age);
 };
 
 const findByName = (name, people) => {
@@ -43,7 +42,7 @@ function createTalkingPerson(name, age) {
   return {
     name,
     age,
-    introduce: function(otherPersonName) {
+    introduce(otherPersonName) {
       return `Hi ${otherPersonName}, my name is ${this.name} and I am ${this.age}!`;
     }
   };

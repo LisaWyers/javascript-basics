@@ -31,7 +31,7 @@ const isGreaterThan = (a, b) => {
 };
 
 const isLessThanOrEqualTo = (a, b) => {
-  return a >= b;
+  return a <= b;
 };
 
 const isOdd = a => {
